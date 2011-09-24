@@ -139,7 +139,7 @@ for no, test in enumerate(test_list):
   if os.name == 'nt':
     with open(outname) as fr:
       lines = fr.readlines()
-    with open(outname, "w") as fw:
+    with open(outname, "wb") as fw:
       fw.writelines(lines)
 
   diff = filediff("%s.html" % origname, outname)
