@@ -240,6 +240,7 @@
             <word name="true"/>
             <word name="false"/>
             <word name="null"/>
+            <word name="undefined"/>
          </keywords>
          <keywords region="Var">
 <!-- Objects -->
