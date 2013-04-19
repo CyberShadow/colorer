@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding='Windows-1251'?>
-<!DOCTYPE hrc PUBLIC 
-	"-//Cail Lomecb//DTD Colorer HRC take5//EN" 
-	"http://colorer.sf.net/2003/hrc.dtd" 
+<!DOCTYPE hrc PUBLIC
+  "-//Cail Lomecb//DTD Colorer HRC take5//EN"
+  "http://colorer.sf.net/2003/hrc.dtd"
 [
-	<!-- include -->
-	<!ENTITY scripts-colorer-protos  SYSTEM "scripts.colorer.ent.hrc">
-	<!ENTITY scripts-far-protos  SYSTEM "scripts.far.ent.hrc">
-	<!ENTITY scripts-ini-protos  SYSTEM "scripts.ini.ent.hrc">
-	<!ENTITY scripts-msg-protos  SYSTEM "scripts.msg.ent.hrc">
-	
-	<!ENTITY rare-ie-weidu-protos  SYSTEM "rare.ie-weidu.ent.hrc">
-	<!ENTITY rare-j2ee-protos  SYSTEM "rare.j2ee.ent.hrc">
-	<!ENTITY rare-qrm-protos  SYSTEM "rare.qrm.ent.hrc">
-	<!ENTITY rare-scripts-protos  SYSTEM "rare.scripts.ent.hrc">
-	<!ENTITY rare-gen-protos  SYSTEM "rare.gen.ent.hrc">
-	
-	<!-- auto -->
-	<!ENTITY php-proto-gen  SYSTEM "php-prot.ent.hrc">
+  <!-- include -->
+  <!ENTITY scripts-colorer-protos  SYSTEM "scripts.colorer.ent.hrc">
+  <!ENTITY scripts-far-protos  SYSTEM "scripts.far.ent.hrc">
+  <!ENTITY scripts-ini-protos  SYSTEM "scripts.ini.ent.hrc">
+  <!ENTITY scripts-msg-protos  SYSTEM "scripts.msg.ent.hrc">
+
+  <!ENTITY rare-ie-weidu-protos  SYSTEM "rare.ie-weidu.ent.hrc">
+  <!ENTITY rare-j2ee-protos  SYSTEM "rare.j2ee.ent.hrc">
+  <!ENTITY rare-qrm-protos  SYSTEM "rare.qrm.ent.hrc">
+  <!ENTITY rare-scripts-protos  SYSTEM "rare.scripts.ent.hrc">
+  <!ENTITY rare-gen-protos  SYSTEM "rare.gen.ent.hrc">
+
+  <!-- auto -->
+  <!ENTITY php-proto-gen  SYSTEM "php-prot.ent.hrc">
 ]>
 
 <hrc version="take5" xmlns="http://colorer.sf.net/2003/hrc"
@@ -79,7 +79,7 @@
       <param name='firstlinebytes' value='2000' description="bytes for 'firstline'"/>
     </parameters>
   </prototype>
-  
+
   <prototype name="asm" group="main" description="ASM">
     <location link="base/asm.hrc"/>
     <filename>/\.(mac|asm|inc|i32|cod)$/i</filename>
@@ -146,14 +146,14 @@
     <location link="base/python.hrc"/>
     <filename>/\.(py|pyw|pys)$/i</filename>
     <firstline weight='2'>/^\#!\S*.+python/</firstline>
-		<parameters>
-			<param name="show-cross" value="both"/>
-		</parameters>
+    <parameters>
+      <param name="show-cross" value="both"/>
+    </parameters>
   </prototype>
   <prototype name="lua" group="main" description="Lua">
     <location link="base/lua.hrc"/>
     <filename>/\.(w?lua)$/i</filename>
-  </prototype>  
+  </prototype>
   <prototype name="ruby" group="main" description="Ruby">
     <location link="base/ruby.hrc"/>
     <filename>/\.(rb|rbw|ruby|rake)$/i</filename>
@@ -176,7 +176,7 @@
     <parameters>
       <param name="tabs-as-errors" value="false" description="Shows tabulation symbol as error"/>
     </parameters>
-  </prototype>	
+  </prototype>
 
   <!--  inet languages  -->
   <package name="html-entity" description="(x)html entities">
@@ -186,10 +186,10 @@
     <location link="inet/html.hrc"/>
     <filename>/\.[^ptr]??html?$/i</filename>
     <firstline>/^\s*&lt;((!DOCTYPE\s+)?HTML|!\-\-)/i</firstline>
-	<parameters>
-		<param name="conditional-comments" value="true" description="IE conditional comments"/>
-		<param name="html-pairs" value="true" description="Highlighting some known HTML Pair tags. Please, use &lt; /&gt; syntax for singles like p, td, tr etc.."/>
-	</parameters>
+    <parameters>
+      <param name="conditional-comments" value="true" description="IE conditional comments"/>
+      <param name="html-pairs" value="true" description="Highlighting some known HTML Pair tags. Please, use &lt; /&gt; syntax for singles like p, td, tr etc.."/>
+    </parameters>
   </prototype>
 
   <prototype name="css" group="inet" description="css">
@@ -204,11 +204,11 @@
     <location link="inet/html-css.hrc"/>
     <filename weight="0">/\.(css)$/i</filename>
     <!--parameters>
-		<param name="ie-css" value="true" description="Use non-standard MSIE css extensions"/>
-		<param name="moz-css" value="true" description="Use non-standard Gecho-based css extensions"/>
-		<param name="opera-css" value="true" description="Use non-standard opera-based css extensions"/>
-		<param name="webkit-css" value="true" description="Use non-standard webkit-based css extensions"/>
-		<param name="khtml-css" value="true" description="Use non-standard khtml-based css extensions"/>
+      <param name="ie-css" value="true" description="Use non-standard MSIE css extensions"/>
+      <param name="moz-css" value="true" description="Use non-standard Gecho-based css extensions"/>
+      <param name="opera-css" value="true" description="Use non-standard opera-based css extensions"/>
+      <param name="webkit-css" value="true" description="Use non-standard webkit-based css extensions"/>
+      <param name="khtml-css" value="true" description="Use non-standard khtml-based css extensions"/>
     </parameters-->
   </prototype>
   <prototype name="svg-css" group="inet" description="css for svg">
@@ -219,18 +219,18 @@
     <location link="inet/sass.hrc"/>
     <filename>/\.(sass)$/i</filename>
   </prototype>
-	<prototype name="less" group="inet" description="Less css">
-		<location link="inet/less.hrc"/>
-		<filename>/\.(less)$/</filename>
-	</prototype>
-	<prototype name="ss" group="inet" description="SilverStripe">
-		<location link="inet/ss.hrc"/>
-		<filename weight="10">/\.(ss)$/</filename>
-	</prototype>
-	<prototype name="twig" group="inet" description="Twig PHP Templates">
-		<location link="inet/twig.hrc"/>
-		<filename weight="10">/\.(twig)$/</filename>
-	</prototype>
+  <prototype name="less" group="inet" description="Less css">
+    <location link="inet/less.hrc"/>
+    <filename>/\.(less)$/</filename>
+  </prototype>
+  <prototype name="ss" group="inet" description="SilverStripe">
+    <location link="inet/ss.hrc"/>
+    <filename weight="10">/\.(ss)$/</filename>
+  </prototype>
+  <prototype name="twig" group="inet" description="Twig PHP Templates">
+    <location link="inet/twig.hrc"/>
+    <filename weight="10">/\.(twig)$/</filename>
+  </prototype>
 
   <prototype name="haml" group="inet" description="HAML">
     <location link="inet/haml.hrc"/>
@@ -350,8 +350,8 @@
     <location link="inet/gen/wml.hrc"/>
     <filename>/\.wml$/i</filename>
   </prototype>
-  
-  
+
+
   <!--  xml types  -->
   <prototype name="xml" group="xml" description="xml">
     <location link="xml/xml.hrc"/>
@@ -364,7 +364,7 @@
       <param name='firstlines'     value='10'   description="lines for 'firstline'"/>
       <param name='firstlinebytes' value='2000' description="bytes for 'firstline'"/>
     </parameters>
-    
+
   </prototype>
   <package name="xmlns" description="xml namespace" targetNamespace="http://www.w3.org/XML/1998/namespace">
     <location link="xml/gen/xmlns.hrc"/>
@@ -426,7 +426,7 @@
   <package name="xsi" description="XML Schema instance" targetNamespace="http://www.w3.org/2001/XMLSchema-instance">
     <location link="xml/gen/xmlschema-instance.hrc"/>
   </package>
-  
+
   <prototype name="relaxng" group="xml" description="Relax NG" targetNamespace="http://relaxng.org/ns/structure/1.0">
     <location link="xml/gen/relaxng.hrc"/>
     <filename>/\.rng/ix</filename>
@@ -435,8 +435,8 @@
     <location link="xml/gen/schematron.hrc"/>
     <filename>/\.sch$/ix</filename>
   </prototype>
-  
-  
+
+
   <package name="wsdl-soap" description="wsdl soap binding" targetNamespace="http://schemas.xmlsoap.org/wsdl/soap/">
     <location link="xml/gen/wsdl-soap.hrc"/>
   </package>
@@ -452,13 +452,13 @@
     <location link="xml/gen/rdf.hrc"/>
     <filename>/\.rdf$/ix</filename>
   </prototype>
-  
-  
+
+
   <prototype name="xmlcatalog" group="xml" description="XML Catalog" targetNamespace="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <location link="xml/gen/xmlcatalog.hrc"/>
     <filename>/\.xml$/ix</filename>
     <firstline weight='5'>/-\/{2}OASIS\/{2}DTD Entity Resolution XML Catalog V1\.0\/{2}EN/</firstline>
-  </prototype>  
+  </prototype>
   <prototype name="docbook" group="xml" description="DocBook 4.2">
     <location link="xml/gen/docbook.hrc"/>
     <filename>/\.(dbk?|docbook)$/i</filename>
@@ -471,7 +471,7 @@
     <filename>/\.(math?|mml)$/i</filename>
     <firstline weight='3'>/MathML/</firstline>
   </prototype>
-  
+
 
   <!--  database languages  -->
   <prototype name="clarion" group="database" description="Clarion">
@@ -511,7 +511,7 @@
 
   <!--  scripts  -->
   &scripts-ini-protos;
-  
+
   <prototype name="Batch" group="scripts" description="Batch/Config.sys/NTcmd">
     <location link="scripts/batch.hrc"/>
     <filename>/\.(Cmd|Bat|nt|btm|sys)$/i</filename>
@@ -574,7 +574,7 @@
     <location link="scripts/qmake.hrc"/>
     <filename>/\.pr[oif]$/i</filename>
   </prototype>
-  
+
   <prototype name="mkb" group="scripts" description="Project build file for Airplay SDK">
     <filename>/\.(mkb|mkf)$/i</filename>
     <location link="scripts/mkb.hrc"/>
@@ -598,7 +598,7 @@
     <location link="scripts/gen/qrc.hrc"/>
     <filename>/\.qrc$/ix</filename>
   </prototype>
-  
+
  <prototype name="m4" group="scripts" description="M4">
     <location link="scripts/m4.hrc"/>
     <filename>/\.m4$/i</filename>
@@ -611,7 +611,7 @@
     <location link="scripts/resrc.hrc"/>
     <filename>/\.(rc|dlg)$/i</filename>
   </prototype>
-  
+
   <prototype name="javacc" group="scripts" description="Java Compiler Compiler">
     <location link="scripts/javacc.hrc"/>
     <filename>/\.(jjt?)$/i</filename>
@@ -642,7 +642,7 @@
     <!-- warning!! extensions conflict with YACC -->
     <filename weight='1'>/\.y$/i</filename>
   </prototype>
-  
+
 
   <prototype name="delphiform" group="scripts" description="Delphi form">
     <location link="scripts/dfm.hrc"/>
@@ -658,7 +658,7 @@
       <param name="spaces-as-errors" value="false" description="Shows trailing spaces as error"/>
     </parameters>
   </prototype>
-  
+
     <prototype name="scons" group="scripts" description="SCons">
     <location link="scripts/scons.hrc"/>
     <filename>/(SConstruct|SConscript)$/i</filename>
@@ -683,7 +683,7 @@
     <location link="scripts/vrml.hrc"/>
     <filename>/\.wrl$/i</filename>
   </prototype>
-  
+
   <prototype name="wsc" group="scripts" description="wsc" targetNamespace="uri:wsc">
     <!-- NOTE! 'targetNamespace' is fictive, used only for xsd2hrc -->
     <location link="scripts/gen/wsc.hrc"/>
@@ -697,7 +697,7 @@
     <location link="scripts/squirrel.hrc"/>
     <filename>/\.nut$/i</filename>
   </prototype>
- 
+
 
   <prototype name="rarscript" group="scripts.install" description="RAR Install Script">
     <location link="scripts/rarscrpt.hrc"/>
@@ -717,13 +717,13 @@
   </prototype>
 
   <!--  rare languages  -->
-  
-	&rare-j2ee-protos;
-	&rare-gen-protos;
-	&rare-scripts-protos;
-	&rare-qrm-protos;
-	&rare-ie-weidu-protos;
-	
+
+  &rare-j2ee-protos;
+  &rare-gen-protos;
+  &rare-scripts-protos;
+  &rare-qrm-protos;
+  &rare-ie-weidu-protos;
+
   <prototype name="c1c" group="rare" description="1C">
     <location link="rare/1c.hrc"/>
     <filename>/\.1c$/i</filename>
@@ -744,7 +744,7 @@
     <location link="rare/autoit.hrc"/>
     <filename>/\.aut$/i</filename>
   </prototype>
-  
+
   <!--  !! you may wish to swap next two types
   because of collision with extensions  -->
   <prototype name="dssp" group="rare" description="Dssp">
@@ -778,12 +778,12 @@
   <prototype name="cup" group="rare" description="CUP">
     <location link="rare/cup.hrc"/>
     <filename>/\.(cup)$/i</filename>
-  </prototype>  
+  </prototype>
   <prototype name="eiffel" group="rare" description="Eiffel">
     <location link="rare/eiffel.hrc"/>
     <filename>/\.e$/i</filename>
   </prototype>
-	<prototype name="erlang" group="rare" description="Erlang">
+  <prototype name="erlang" group="rare" description="Erlang">
     <location link="rare/erlang.hrc"/>
     <filename>/\.[eh]rl$/i</filename>
   </prototype>
@@ -835,7 +835,7 @@
     <filename>/\.(jcl)$/i</filename>
     <firstline weight='2'>/^\/\//i</firstline>
   </prototype>
-  
+
   <prototype name="sml" group="rare" description="Standard ML">
     <location link="rare/sml.hrc"/>
     <filename>/\.(sml|sig)$/i</filename>
@@ -851,7 +851,7 @@
   <prototype name="stata" group="rare" description="STATA">
     <location link="rare/stata.hrc"/>
     <filename>/\.a?do$/i</filename>
-  </prototype>  
+  </prototype>
   <prototype name="turboProlog" group="rare" description="Turbo Prolog">
     <location link="rare/tprolog.hrc"/>
     <filename>/\.tpl$/i</filename>
@@ -921,7 +921,7 @@
 
   <!--  other types  -->
   &scripts-msg-protos;
-  
+
   <prototype name="ass" group="other" description="(Advanced) SubStation Alpha script">
     <location link="misc/assa.hrc"/>
     <filename>/\.(ssa|ass)$/</filename>
@@ -988,7 +988,7 @@
 
   <type name="default"><scheme name='default'/></type>
 
-  
+
   <!--  packages  -->
 
   <package name="def" description="core definitions">
